@@ -1,0 +1,31 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: swainjohn-login-gov-proxy
+  namespace: swainjohn
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: login-gov-proxy
+  namespace: swainjohn
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: login-gov-proxy
+  template:
+    metadata:
+      labels:
+        app: login-gov-proxy
+    spec:
+      containers:
+        - name: proxy
+          image: ghcr.io/swainjohn/login-gov-proxy:latest
+          ports:
+            - containerPort: 443
+          env:
+            - name: AUTHORITATIVE_DOMAIN
+              value: soggy.gov
+            - name: TRUSTED_IDP
+              value: login.gov

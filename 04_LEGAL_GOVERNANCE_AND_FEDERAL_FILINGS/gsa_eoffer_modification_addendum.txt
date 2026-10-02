@@ -1,0 +1,3 @@
+GSA eOFFER MODIFICATION ADDENDUM
+
+This addendum amends the supporting technical package for sovereign interoperability services under the SWAINJOHN governance model and aligns the implementation to open-source controls, robust cryptographic validation, and agency compliance audits.
