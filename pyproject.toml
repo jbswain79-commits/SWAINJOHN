@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "swainjohn-nexus"
+version = "0.1.0"
+description = "SWAINJOHN Nexus core validation and compliance tooling"
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [{ name = "jbswain79-commits" }]
+dependencies = []
+
+[project.scripts]
+swainjohn-nexus = "swainjohn_nexus.cli:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
