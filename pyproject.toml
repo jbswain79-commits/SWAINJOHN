@@ -9,10 +9,11 @@ description = "SWAINJOHN Nexus core validation and compliance tooling"
 readme = "README.md"
 requires-python = ">=3.10"
 authors = [{ name = "jbswain79-commits" }]
-dependencies = []
+dependencies = ["mcp>=1.2.0"]
 
 [project.scripts]
 swainjohn-nexus = "swainjohn_nexus.cli:main"
+swainjohn-mcp = "swainjohn_nexus.mcp_server:main"
 
 [tool.setuptools]
 package-dir = {"" = "src"}

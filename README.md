@@ -10,6 +10,64 @@
 
 ---
 
+## PROJECT SUPPORT MATERIALS
+
+**New to this repo?** Start here: [GitHub Navigation Guide](docs/GITHUB_NAVIGATION_GUIDE.md)
+
+This guide provides:
+- A structured workflow for understanding project scope and architecture
+- How to navigate the repo effectively
+- Tips for evaluating experimental systems like SWAINJOHN
+- Best practices for hackathon participation and agent evaluation
+
+The guide is especially useful if you're exploring this repo as part of an MCP (Model Context Protocol) project or AI agent evaluation.
+
+## MCP SERVER SKELETON
+
+This repository now includes an initial MCP-compatible server layer to support registry-style experimentation without overstating production readiness.
+
+The MCP server skeleton lives in:
+- `src/swainjohn_nexus/mcp_server.py`
+- `docs/MCP_SERVER.md`
+
+It is intentionally a minimal skeleton focused on:
+- validating packet headers
+- evaluating spatial drift compliance
+- exposing a small, reviewable tool surface for future MCP integration
+
+It is a roadmap toward registry submission, not a claim of full registry completion.
+
+---
+
+## PUBLIC SECTOR MODERNIZATION, GIS WORKFLOW DESIGN, AND AI EVALUATION
+
+SWAINJOHN is designed as a local-first, experimental prototype for public-sector data modernization. It reflects patterns used in public-sector GIS work, local data ingestion pipelines, and AI evaluation frameworks that are increasingly relevant to government technology teams and modern innovation cohorts.
+
+The repository sits at the intersection of three important areas:
+
+1. Public sector GIS and civic data workflows
+   SWAINJOHN explores spatial and operational data patterns that resemble the kinds of information systems used in local government, planning, facilities management, and public-service workflows. It incorporates schema design, routing logic, and local staging patterns that align with civic and geospatial modernization efforts.
+
+2. Local-first data ingestion and staging
+   The project emphasizes controlled, transparent ingestion of data from local files and read-only external sources. This is an important pattern for public-sector environments where teams need to assess, validate, and stage information before broader operational adoption, while maintaining visibility into provenance, schema constraints, and system boundaries.
+
+3. AI evaluation and operational workflow assessment
+   The repository also supports the broader practice of evaluating AI and automation workflows. It does so by documenting evaluation-oriented patterns: system boundaries, local validation, structured ingestion, and explicit limitations. This aligns with AI governance and public-sector AI frameworks that stress trustworthy deployment, measurable success, and clear evaluation criteria.
+
+Together, these themes reflect the kind of work that appears in government technology ecosystems: structured data pipelines, spatial and civic information systems, and evaluation-aware AI experimentation. The project is intentionally designed as an illustrative prototype rather than a production system, which makes it useful for learning, assessment, and early-stage modernization work without overstating operational authority or legal status.
+
+This approach is well aligned with the types of technical patterns found in public-sector GIS, government data models, and AI evaluation repositories, including:
+- local and read-only ingestion pipelines
+- spatial schema and routing design
+- structured data staging for public-service workflows
+- documented evaluation criteria for prototype systems
+
+The project is not intended to represent an agency system or official government service. Instead, it functions as a demonstrator for disciplined prototype thinking: local-first, transparent, schema-driven, reviewable, and explicitly bounded in scope.
+
+This framing supports both technical portfolio development and relevance to programs such as TechForce, where participants are expected to show practical experience with modernization work, government-aligned systems, and AI-enabled operational evaluation.
+
+---
+
 ## I. PROJECT SCOPE
 SWAINJOHN is an experimental collection of local data-staging utilities,
 spatial schema examples, and a small packet-header parser and TCP listener.
@@ -34,6 +92,7 @@ materials.
 
 ```text
 src/swainjohn_nexus/        # Experimental parser and TCP listener package
+src/swainjohn_nexus/mcp_server.py  # Initial MCP server skeleton
 tests/                      # Unit tests for utilities and package
 01_PRODUCTION_SOURCE_CODE/   # Illustrative sample source artifacts
 02_DATABASE_AND_STORAGE_LAYERS/ # Example schemas and local ingestion outputs
@@ -43,6 +102,7 @@ tests/                      # Unit tests for utilities and package
 build_portfolio.py          # Generates illustrative portfolio files
 ingest_local_documents.py   # Local text-file staging utility
 ingest_arcgis_layer.py      # Read-only ArcGIS staging utility
+docs/                       # Project documentation and guides
 ```
 
 ---
@@ -151,3 +211,25 @@ explicitly before cross-layer spatial analysis. This schema defines data
 storage and routing topology only; it does not assign legal jurisdiction or
 determine access permissions, and it is not automatically populated by the
 ArcGIS JSONL staging command.
+
+---
+
+## MCP SERVER STATUS
+
+This repository is progressing toward MCP compatibility, but it is not yet presented as a registry-ready production package.
+
+The current server skeleton is designed to:
+- expose reviewable tools for packet validation and spatial drift checks
+- demonstrate a local-first tool pattern compatible with future MCP client integration
+- allow the repo to be framed as a prototype environment for AI and civic workflow evaluation
+
+For full registry readiness, the project still requires a more formal server implementation, tools manifest, packaging metadata, and validation against an MCP client runtime.
+
+See: `docs/MCP_SERVER.md`
+
+---
+
+## Conclusion
+
+SWAINJOHN serves as a prototype for structured public-sector modernization, spatial workflow design, and AI system evaluation. It remains intentionally bounded, transparent, and illustrative while still offering a clear technical foundation for future MCP integration and broader government-tech experimentation.
+
