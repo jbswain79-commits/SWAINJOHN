@@ -10,6 +10,20 @@
 
 ---
 
+## PROJECT SUPPORT MATERIALS
+
+**New to this repo?** Start here: [GitHub Navigation Guide](docs/GITHUB_NAVIGATION_GUIDE.md)
+
+This guide provides:
+- A structured workflow for understanding project scope and architecture
+- How to navigate the repo effectively
+- Tips for evaluating experimental systems like SWAINJOHN
+- Best practices for hackathon participation and agent evaluation
+
+The guide is especially useful if you're exploring this repo as part of an MCP (Model Context Protocol) project or AI agent evaluation.
+
+---
+
 ## I. PROJECT SCOPE
 SWAINJOHN is an experimental collection of local data-staging utilities,
 spatial schema examples, and a small packet-header parser and TCP listener.
@@ -43,6 +57,7 @@ tests/                      # Unit tests for utilities and package
 build_portfolio.py          # Generates illustrative portfolio files
 ingest_local_documents.py   # Local text-file staging utility
 ingest_arcgis_layer.py      # Read-only ArcGIS staging utility
+docs/                       # Project documentation and guides
 ```
 
 ---
